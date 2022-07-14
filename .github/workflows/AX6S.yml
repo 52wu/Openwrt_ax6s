@@ -11,13 +11,12 @@
 name: Redmi_AX6S
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+  release:
+  types: [published]
+
+  push:
+    branches: 
+      - master
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
